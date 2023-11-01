@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuários</title>
+</head>
+<style>
+    body{
+    
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:#3498db;;;
+    
+    }
+    
+    div{
+    
+    
+        background-color: rgba(0, 0, 0, 0.623);
+        position: absolute;
+        color: white;
+        text-align: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding:50px;
+        border-radius: 20px;
+    
+    }
+    input{
+        padding: 10px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+    
+        }
+        button{
+        border: none;
+        cursor: pointer;
+        padding: 15px;
+        width: 50%;
+        background-color: dodgerblue;
+        border-radius: 10px;
+        color: white;
+        font-size: 15px;
+        }
+        button.button{
+            background-color: dodgerblue;
+        }
+        button.button:hover{
+    
+        background-color: blue;
+        }
+    
+            button{
+        border: none;
+        cursor: pointer;
+        padding: 15px;
+        width: 60%;
+        background-color: dodgerblue;
+        border-radius: 10px;
+        color: white;
+        font-size: 15px;
+        }
+    
+        button.excluir{
+        background-color: rgb(230, 77, 77);    
+    
+        }
+        button.excluir:hover{
+    
+         background-color: rgb(255, 0, 0);
+    
+        }
+        button.atualizar{
+            background-color: rgb(3, 121, 3);
+        }
+        button.atualizar:hover{
+            background-color: rgb(146, 233, 15);
+        }
+    
+        a{
+    text-decoration: none;
+    background-color: dodgerblue; 
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    top: 12px;
+    left: 12px;
+    position: fixed;
+    
+      }
+    
+    </style>
+<body>
+    <div class="card">
+        <a href="../" class="btn">Voltar</a>
+    <h1>Buscar Produto</h1>
+    <hr>
+    <br>
+    <label for="getProdId">ID do Produto: </label>
+    <input type="number" id="getProdId" placeholder="Digite o ID do produto">
+    <br><br>
+    <button onclick="getProd()">Buscar</button>
+
+    <h1>Gerenciar Produto</h1>
+    <hr>
+    <br>
+    <label for="inputNome">Nome:</label>
+    <input type="text" id="inputNome" placeholder="Digite o nome do produto">
+    <br><br>
+    <label for="inputPreco">Preço:</label>
+    <input type="text" id="inputPreco" placeholder="Digite o nome do produto">
+    <br><br>
+    <label for="inputQtd">Quantidade:</label>
+    <input type="number" id="inputQtd" placeholder="Digite a quantidade">
+    <br><br>
+    <button onclick="updateUser()     
+    " class="atualizar">Atualizar</button>
+    <br><br>
+    <button onclick="deleteUser()
+    " class="excluir">Excluir</button>
+</div>
+
+<script src="js/getProd.js"></script>
+<script src="js/updateProd.js"></script>
+<script src="js/deleteProd.js"></script>
+</body>
+</html>

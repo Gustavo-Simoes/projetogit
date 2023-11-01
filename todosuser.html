@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+    body{
+
+        font-family: Arial, Helvetica, sans-serif;
+    background-color:#3498db; 
+    }
+
+div.card{
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    color: white;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:80px;
+    border-radius: 15px;
+}
+input{
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-size: 15px;
+
+    }
+    button{
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    background-color: dodgerblue;
+    boder-radius: 10px;
+    color: white;
+    fonte-size: 15px;
+    }
+    button:hover{
+        background-color: deepskyblue;
+        cursor: pointer;
+
+    }
+    a{
+
+  text-decoration: none;
+  background-color: dodgerblue; 
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  top: 20px;
+  left: 20px;
+  position: fixed;
+
+
+    }
+</style>
+<body>
+    <div class="card">
+        <a href="../">Voltar</a>
+    <h1>Listar Usuários</h1>
+    <hr>
+    <br>
+    <button id="getAllButton">Listar Todos os Usuários</button>
+    <div id="usersList"></div>
+</div>
+
+<script src="js/getAll.js"></script> 
+</body>
+</html>

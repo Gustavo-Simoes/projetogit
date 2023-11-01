@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Usuário</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3498db;;
+        }
+
+        .card {
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 1px solid darkblue;
+            border-radius: 15px;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #ffffff;
+        }
+
+        a {
+            display: block;
+            margin: 10px 0;
+            padding: 10px;
+            text-decoration: none;
+            background-color: #007bff;
+            color:#fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+</style>
+<body>
+    <div class="card">
+        <fieldset>
+        <h1>Escolha uma Opção:</h1>
+        <hr>
+        <br>
+        <h1>Usuários:</h1>
+        <a href="criaruser.html" class="Cadastrar">Cadastrar Usuário</a>
+        <br>
+        <a href="todosuser.html">Listar Usuários</a>
+        <br>
+        <a href="buscauser.html">Buscar Usuario</a>
+        <br>
+        <h1>Produtos:</h1>
+        <a href="criarprod.html">Cadastrar Produto</a>
+        <br>
+        <a href="todosprod.html">Listar Produtos</a>
+        <br>
+        <a href="buscaprod.html">Buscar Produto</a>
+        <br>
+        <a href="prod_e_user.html">Vincular o Produto</a>
+        <br>
+        <a href="grafico.html">Visualizar o gráfico</a>
+        </fieldset>
+    </div>
+    <script>
+        window.onload = function() {
+            fetch('/backend/token')
+                .then(response => response.json())
+                .then(data => localStorage.setItem('token', data.token));
+        }
+        
+    </script>
+</body>
+</html>

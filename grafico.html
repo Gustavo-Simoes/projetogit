@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários</title>
+    <script src="js/Chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+
+.form-one {
+  flex: 1;
+  padding: 20px;
+  background-color: #3498db;
+  color: #fff;
+}
+
+.form-one h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.form-one p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+
+.voltar {
+  color: #fff;
+  text-decoration: none;
+  background-color: #3498db;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  display: inline-block; 
+  position: relative; 
+}
+
+
+.voltar::before {
+  content: "";
+  position: absolute;
+  top: -5px; 
+  left: -5px; 
+  right: -5px; 
+  bottom: -5px; 
+  border: 2px solid #3498db; 
+  border-radius: 7px; 
+}
+
+
+.voltar:hover {
+  background-color: #2666a4;
+}
+
+
+.form {
+  flex: 2;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+
+.form-header a {
+  text-decoration: none;
+  color: #3498db;
+  font-weight: bold;
+}
+
+.input-group {
+  text-align: center;
+}
+
+#chart-container {
+  width: 100%;
+  text-align: center;
+}
+
+#myChart {
+  width: 100%;
+}
+
+
+</style>
+<body>
+    <div class="container">
+        <div class="form-one">
+            <h1>ABA USUÁRIOS</h1>
+            <p>Espaço de cadastro, busca, atualização e exclusão do usuário.</p>
+            <a class="voltar" href="../">Voltar à tela inicial</a>
+        </div>
+        <div class="form">
+            <form action="#">
+                <div class="form-header">
+                    <a href="prod_e_user.html">VINCULAR</a>
+                    <a href="grafico.html">GRÁFICO</a>
+                </div>
+                <div class="input-group">
+                    <h1>GRÁFICO</h1>
+                    <div id="chart-container" style="width: 30%; margin: 0 auto;">
+                        <canvas id="myChart" width="400" height="400"></canvas>
+                    </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/grafico.js"></script> 
+</body>
+</html>
